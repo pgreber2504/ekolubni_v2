@@ -1,0 +1,18 @@
+@import "../../../shared/styles/variables";
+
+.button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 60px;
+  color: $color-primary;
+  background: $background;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover,
+  &:active {
+    background: $action-color;
+    color: #fff;
+  }
+}

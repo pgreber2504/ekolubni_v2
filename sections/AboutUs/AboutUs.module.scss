@@ -1,0 +1,36 @@
+@import "../../shared/styles/variables";
+.about--desc {
+  text-align: center;
+  font-size: $font-header;
+  margin: 2rem;
+}
+
+.about--item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  gap: 10%;
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .about--item_photo {
+    height: 18rem;
+    flex-basis: 40%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about--item_desc {
+    flex-basis: 50%;
+
+    h4 {
+      font-size: $font-header;
+    }
+    p {
+      color: $font-color-2;
+    }
+  }
+}

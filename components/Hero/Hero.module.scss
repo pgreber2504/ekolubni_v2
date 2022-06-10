@@ -1,0 +1,36 @@
+@import "../../shared/styles/variables";
+
+.hero {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 10rem;
+  color: $font-color-reversed;
+  & > * {
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: $font-big-header;
+  }
+
+  p {
+    font-size: $font-content;
+  }
+
+  .hero--photos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hero--img {
+      position: relative;
+      width: 22rem;
+      height: 26rem;
+      margin: 0 3rem;
+      overflow: hidden;
+    }
+  }
+}

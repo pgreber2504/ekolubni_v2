@@ -1,0 +1,14 @@
+@import "../../shared/styles/variables";
+
+.footer {
+  display: flex;
+  padding: 6rem 3rem;
+  background-color: #37383d;
+  justify-content: space-between;
+  align-items: center;
+  color: $background;
+
+  .footer--logo {
+    height: 6rem;
+  }
+}

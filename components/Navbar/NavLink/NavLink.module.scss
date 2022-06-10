@@ -1,0 +1,10 @@
+@import "../../../shared/styles/variables";
+.navLink {
+  margin-left: 2rem;
+  transition: all 0.4s ease-in;
+
+  &:hover,
+  &:active {
+    color: $action-color;
+  }
+}
