@@ -17,13 +17,6 @@ const Hero = () => {
         Ekolubni przyjadą do WAS
       </p>
       <Button onClick={() => {}} title={"Skontaktuj się z nami"} />
-      <div className={classes["hero--photos"]}>
-        {HERO_IMAGES_DATA.map((el) => (
-          <Card className={classes["hero--img"]} key={el.id}>
-            <Image src={el.src} alt={el.alt} layout={"fill"} />
-          </Card>
-        ))}
-      </div>
     </div>
   );
 };

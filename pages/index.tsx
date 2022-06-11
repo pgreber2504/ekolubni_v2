@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import AboutUs from "../sections/AboutUs/AboutUs";
+import Workshop from "../sections/Workshops/Workshop";
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,15 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <AboutUs
+          id="section--1"
           title=""
           description="O NAS"
           aboutUsDescription="Zacznij z nami swoją wielką przygodę z ekspozytywnością"
+        />
+        <Workshop
+          id="section--4"
+          title=""
+          description="WARSZTATY EKOLOGICZNE"
         />
       </Layout>
     </>

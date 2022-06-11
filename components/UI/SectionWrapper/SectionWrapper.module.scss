@@ -1,8 +1,9 @@
 @import "../../../shared/styles/variables";
 
 .section {
-  padding: 8rem 20rem;
+  padding: 8rem 15rem;
   width: 100%;
+  text-align: center;
 
   h2 {
     font-size: $font-section-header;
@@ -27,5 +28,8 @@
       border-radius: 10px 10px 0px 0;
       padding: 0 1rem;
     }
+  }
+  article {
+    text-align: left;
   }
 }
