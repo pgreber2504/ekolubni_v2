@@ -1,1 +1,88 @@
+@import "../../shared/styles/variables";
 
+.contact {
+  position: relative;
+  height: 55rem;
+  width: 100%;
+}
+
+.address {
+  top: 15%;
+  position: absolute;
+  height: 40rem;
+  width: 200%;
+  background: $font-color;
+  color: $font-color-reversed;
+  left: -50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 50%;
+  flex-direction: column;
+  div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(1fr, 3);
+    align-items: center;
+    gap: 0.2rem 1rem;
+    h5 {
+      grid-column: 1 / span 2;
+      font-size: $font-big-header;
+      font-weight: bold;
+    }
+    svg {
+      height: $icon-size;
+      width: $icon-size;
+      background: $font-color-reversed;
+      fill: $font-color;
+      border-radius: 50%;
+      padding: 0.2rem;
+    }
+    p {
+      font-size: $font-header;
+    }
+  }
+}
+
+.contact--form {
+  position: absolute;
+  z-index: 1;
+  background-color: $font-color-reversed;
+  width: 60%;
+  height: 100%;
+  right: -5%;
+  top: 0;
+  padding: 5rem 4rem;
+  display: grid;
+  gap: 2rem 0;
+  grid-template-columns: 15rem;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+
+  h5 {
+    align-self: center;
+    font-size: $font-big-header;
+    grid-row: 1;
+    grid-column: 1 / span2;
+  }
+
+  label {
+    font-size: $font-content;
+  }
+
+  label[for="message"] {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  textarea {
+    grid-row: 4 / span 2;
+    background-color: $background;
+    border-bottom: none;
+    border-radius: 10px;
+    height: 100%;
+  }
+  button {
+    grid-row: 6;
+  }
+}

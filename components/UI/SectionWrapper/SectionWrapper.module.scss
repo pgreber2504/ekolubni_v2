@@ -1,7 +1,8 @@
 @import "../../../shared/styles/variables";
 
 .section {
-  padding: 8rem 15rem;
+  margin-top: 8rem;
+  padding: 0 10rem;
   width: 100%;
   text-align: center;
 
@@ -31,5 +32,6 @@
   }
   article {
     text-align: left;
+    padding: 4rem 0;
   }
 }

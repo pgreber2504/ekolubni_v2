@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import AboutUs from "../sections/AboutUs/AboutUs";
+import Contact from "../sections/Contact/Contact";
 import Workshop from "../sections/Workshops/Workshop";
 
 const Home: NextPage = () => {
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
           title=""
           description="WARSZTATY EKOLOGICZNE"
         />
+        <Contact id="section--5" title="" description="KONTAKT" />
       </Layout>
     </>
   );
