@@ -22,13 +22,17 @@
   div {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr, 4);
     align-items: center;
     gap: 0.2rem 1rem;
     h5 {
       grid-column: 1 / span 2;
       font-size: $font-big-header;
       font-weight: bold;
+    }
+    h6 {
+      grid-column: 1 / span 2;
+      font-size: $font-section-descr;
     }
     svg {
       height: $icon-size;

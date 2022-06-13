@@ -6,7 +6,7 @@
   cursor: pointer;
 
   &:hover,
-  &:active {
+  &.active {
     color: $action-color;
   }
 }

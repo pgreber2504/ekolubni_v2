@@ -1,16 +1,20 @@
 import React from "react";
 
-type FormDataType = {
+export type FormDataType = {
   [key: string]: string;
 };
 
 const useForm = (
-  initialState = {},
+  initialState: FormDataType = {},
   onSubmit: (formData: FormDataType) => void
 ) => {
   const [formData, setFormData] = React.useState(initialState);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    console.log(e.target.name);
+
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 

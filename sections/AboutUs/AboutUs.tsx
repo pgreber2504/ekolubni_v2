@@ -24,7 +24,7 @@ const AboutUs = ({
       {ABOUT_US_DATA.map((el, i) => (
         <div className={classes["about--item"]} key={i}>
           <Card className={classes["about--item_photo"]}>
-            <Image layout="fill" src={el.img} alt="eeasd" />
+            {/* <Image layout="fill" src={el.img} alt="eeasd" /> */}
           </Card>
           <div className={classes["about--item_desc"]}>
             <h4>{el.name}</h4>

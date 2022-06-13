@@ -4,6 +4,7 @@ import SectionWrapper from "../../components/UI/SectionWrapper/SectionWrapper";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/Button";
+import useForm, { FormDataType } from "../../hooks/useForm";
 
 type ContactPropTypes = {
   id: string;
@@ -12,50 +13,54 @@ type ContactPropTypes = {
 };
 
 const Contact = ({ id, title, description }: ContactPropTypes) => {
+  const submitData = (formData: FormDataType) => {
+    console.log(formData);
+  };
+  const { formData, handleInputChange, handleSubmit } = useForm({}, submitData);
+
+  const { name, email, message } = formData;
+
   return (
     <SectionWrapper id={id} title={title} description={description}>
       <div className={classes.contact}>
         <address className={classes.address}>
           <div>
-            <h5>Marta</h5>
+            <h5>Eko Kontakt</h5>
+            <h6>
+              Zachęcamy do kontaktu <br />
+              telefonicznego bądź mailowego:
+            </h6>
             <AiOutlinePhone />
-            <p>500-500-500</p>
+            <p>725-133-031</p>
             <AiOutlineMail />
-            <p>test@test.com</p>
-          </div>
-          <div>
-            <h5>Zosia</h5>
-            <AiOutlinePhone />
-            <p>500500500</p>
-            <AiOutlineMail />
-            <p>test@test.com</p>
+            <p>ekolubni.warsztaty@gmail.com</p>
           </div>
         </address>
-        <form className={classes["contact--form"]}>
+        <form className={classes["contact--form"]} onSubmit={handleSubmit}>
           <h5>Napisz do nas</h5>
           <Input
             name="name"
             type="text"
-            value=""
+            value={name}
             label
             labelText="Imię i Nazwisko"
-            onChange={() => {}}
+            onChange={handleInputChange}
           />
           <Input
             name="email"
             type="email"
             label
             labelText="Adres E-Mail"
-            value=""
-            onChange={() => {}}
+            value={email}
+            onChange={handleInputChange}
           />
           <Input
             name="message"
             type="textarea"
             label
             labelText="Twoja wiadomośc"
-            value=""
-            onChange={() => {}}
+            value={message}
+            onChange={handleInputChange}
           />
           <Button title="Wyślij" onClick={() => {}} />
         </form>

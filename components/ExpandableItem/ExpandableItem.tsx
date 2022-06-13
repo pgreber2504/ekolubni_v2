@@ -3,24 +3,15 @@ import classes from "./ExpandableItem.module.scss";
 import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
 import { AnimatePresence, motion } from "framer-motion";
+import { WorkshopDataType } from "../../shared/types/types";
 
-type ExpandableItemTypes = {
-  title: string;
-  description: string;
-  type: string;
-};
-
-const ExpandableItem = ({ title, description, type }: ExpandableItemTypes) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const expandedDiv = (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ opacity: { duration: 0.5 } }}
-    >
-      <p>{description}</p>
-    </motion.div>
-  );
+const ExpandableItem = ({
+  title,
+  heading,
+  description,
+  type,
+  footer,
+}: WorkshopDataType) => {
   return (
     <div className={classes.card}>
       <div className={`${classes.face} ${classes.face1} ${classes[type]}`}>
@@ -31,7 +22,13 @@ const ExpandableItem = ({ title, description, type }: ExpandableItemTypes) => {
       </div>
       <div className={`${classes.face} ${classes.face2}`}>
         <div className={classes.content}>
-          <p>{description}</p>
+          <h5>{heading}</h5>
+          <ul>
+            {description.map((el) => (
+              <li key={el}>{el}</li>
+            ))}
+          </ul>
+          <p>{footer}</p>
           <Button title="Zapytaj o więcej" onClick={() => {}} />
         </div>
       </div>

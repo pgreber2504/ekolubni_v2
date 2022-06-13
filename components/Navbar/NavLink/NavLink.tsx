@@ -9,10 +9,8 @@ type NavLinkPropTypes = {
 
 const NavLink = ({ id, title }: NavLinkPropTypes) => {
   return (
-    <Link to={id}>
-      <li className={classes.navLink} id={id}>
-        {title}
-      </li>
+    <Link to={id} smooth activeClass={classes.active}>
+      <li className={classes.navLink}>{title}</li>
     </Link>
   );
 };

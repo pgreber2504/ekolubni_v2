@@ -25,6 +25,7 @@ const Input = ({
   const input =
     type !== "textarea" ? (
       <input
+        name={name}
         className={classes.input}
         type={type}
         value={value}
@@ -33,6 +34,7 @@ const Input = ({
       ></input>
     ) : (
       <textarea
+        name={name}
         className={classes.input}
         value={value}
         placeholder={placeholder}
