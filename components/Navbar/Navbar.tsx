@@ -1,4 +1,5 @@
 import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
 import Button from "../UI/Button/Button";
 import Logo from "../UI/Logo/Logo";
 import classes from "./Navbar.module.scss";
@@ -12,6 +13,7 @@ const Navbar = () => {
       <Logo />
       <NavLinks />
       <Button title={"Zapisz się już teraz"} onClick={clickButtonHandler} />
+      <Sidebar />
     </nav>
   );
 };

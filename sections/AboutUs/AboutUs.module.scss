@@ -20,10 +20,9 @@
     width: 100%;
     margin-bottom: 5rem;
     gap: 10%;
-  }
-
-  &:nth-child(2) {
-    // flex-direction: row-reverse;
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
   }
 
   .about--item_photo {
