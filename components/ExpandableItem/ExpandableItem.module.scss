@@ -10,6 +10,7 @@
   @include mixins.breakpoint(large) {
     width: 60%;
     height: 40rem;
+    margin-bottom: 4rem;
   }
 
   & .face {
@@ -108,7 +109,7 @@
       color: $font-color-reversed;
 
       @include mixins.breakpoint(large) {
-        transform: translateX(50);
+        transform: translateX(50%);
       }
       .content {
         opacity: 1;
