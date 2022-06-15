@@ -1,10 +1,16 @@
+@use "../../shared/styles/mixins";
 @import "../../shared/styles/variables";
 
 .card {
   position: relative;
   cursor: pointer;
-  width: 60%;
-  height: 40rem;
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 35rem;
+  @include mixins.breakpoint(large) {
+    width: 60%;
+    height: 40rem;
+  }
 
   & .face {
     width: 100%;
@@ -19,7 +25,12 @@
       justify-content: center;
       align-items: center;
       z-index: 1;
-      transform: translateX(0);
+      transform: translateY(0);
+
+      @include mixins.breakpoint(large) {
+        transform: translateX(0);
+      }
+
       .content {
         opacity: 1;
         transition: 0.5s;
@@ -47,30 +58,42 @@
       padding: 20px;
       box-sizing: border-box;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-      transform: translateX(0);
+      transform: translateY(0);
+
+      @include mixins.breakpoint(large) {
+        transform: translateX(0);
+      }
       .content {
         overflow: scroll;
         & > * {
-          margin-bottom: 1rem;
+          margin-bottom: 0.5rem;
+          @include mixins.breakpoint(large) {
+            margin-bottom: 1rem;
+          }
         }
         h5 {
-          font-size: $font-header;
-          margin-bottom: 1rem;
+          font-size: $font-content;
+          @include mixins.breakpoint(large) {
+            font-size: $font-header;
+          }
         }
         ul {
           li {
-            font-size: $font-content;
+            font-size: 1rem;
+            @include mixins.breakpoint(large) {
+              font-size: $font-content;
+            }
           }
-        }
-        p {
-          margin-bottom: 1rem;
         }
       }
     }
   }
   &:hover {
     .face.face1 {
-      transform: translateX(-50%);
+      transform: translateY(-20%);
+      @include mixins.breakpoint(large) {
+        transform: translateX(-50%);
+      }
       .content {
         h4 {
           background-color: $font-color;
@@ -80,9 +103,13 @@
     }
 
     .face.face2 {
-      transform: translateX(50%);
+      transform: translateY(70%);
       background-color: $font-color;
       color: $font-color-reversed;
+
+      @include mixins.breakpoint(large) {
+        transform: translateX(50);
+      }
       .content {
         opacity: 1;
       }

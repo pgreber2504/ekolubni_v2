@@ -1,8 +1,21 @@
+@use "../../shared/styles/mixins";
 .navbar {
   height: 8rem;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 4rem;
+  margin-right: 1rem;
+
+  button {
+    display: none;
+  }
+
+  @include mixins.breakpoint(large) {
+    margin: 0 4rem;
+
+    button {
+      display: block;
+    }
+  }
 }

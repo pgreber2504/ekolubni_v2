@@ -1,4 +1,5 @@
 @import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
 .about--desc {
   text-align: center;
   font-size: $font-header;
@@ -7,13 +8,22 @@
 
 .about--item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 5rem;
   gap: 10%;
 
+  @include breakpoint(large) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    gap: 10%;
+  }
+
   &:nth-child(2) {
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
   }
 
   .about--item_photo {
