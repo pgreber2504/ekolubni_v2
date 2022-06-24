@@ -8,7 +8,7 @@ export const WORKSHOPS_DATA = [
       `dla 5, 6 latków segreguję i co dalej? Recykling; droga od śmiecia do produktu, upcykling czyli tworzę dzieła sztuki z odpadów, Kodeks Ekoluba czyli co robię dla planety`,
     ],
     footer: `Dodatkowo zgodnie ze świętami tradycyjnymi lub dyktowanymi przez ekokalendarz, proponujemy warsztaty na których dzieci z odpadów robią prezenty dla Babć i Dziadków, Mam i dekoracje świąteczne
-    W okresie wiosenno letnim organizujemy gry i zabawy na powietrzu, uczymy się siać łąkę dla zapylaczy, tworzymy kompostownik, sprzątamy okolicę z zachowaniem zasad segregacji, urządzamy zawody ekologiczne z okolicznymi placówkami`,
+    W okresie wiosenno letnim organizujemy gry i zabawy na powietrzu, uczymy się siać łąkę dla zapylaczy.`,
     id: "ws1",
     type: "preschool",
   },

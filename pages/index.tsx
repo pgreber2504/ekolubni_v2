@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import AboutUs from "../sections/AboutUs/AboutUs";
 import Contact from "../sections/Contact/Contact";
+import Gallery from "../sections/Gallery/Gallery";
 import Workshop from "../sections/Workshops/Workshop";
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
           description="O NAS"
           aboutUsDescription="Zacznij z nami swoją wielką przygodę z ekspozytywnością"
         />
+        <Gallery id="section--2" title="" description="GALERIA" />
         <Workshop
           id="section--4"
           title=""
