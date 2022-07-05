@@ -1,8 +1,16 @@
+@use "../../../shared/styles/mixins";
 @import "../../../shared/styles/variables";
 
 .section {
-  padding: 8rem 20rem;
+  margin-top: 4rem;
+  padding: 0 2rem;
   width: 100%;
+  text-align: center;
+
+  @include mixins.breakpoint(large) {
+    margin-top: 8rem;
+    padding: 0 10rem;
+  }
 
   h2 {
     font-size: $font-section-header;
@@ -27,5 +35,9 @@
       border-radius: 10px 10px 0px 0;
       padding: 0 1rem;
     }
+  }
+  article {
+    text-align: left;
+    padding: 4rem 0;
   }
 }

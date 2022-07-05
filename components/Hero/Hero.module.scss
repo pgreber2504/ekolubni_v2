@@ -1,4 +1,5 @@
 @import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
 
 .hero {
   display: flex;
@@ -6,18 +7,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 3rem 10rem;
+  //   padding: 3rem 1rem;
   color: $font-color-reversed;
+  position: relative;
+  margin: 2rem 3rem;
+  z-index: 1;
   & > * {
     margin: 1rem;
   }
 
   h1 {
     font-size: $font-big-header;
+    @include breakpoint(large) {
+      font-size: calc($font-big-header + 1rem);
+    }
   }
 
   p {
-    font-size: $font-content;
+    font-size: $font-header;
+    @include breakpoint(large) {
+      font-size: $font-section-descr;
+    }
+  }
+
+  @include breakpoint(large) {
+    margin: 4rem 10rem;
   }
 
   .hero--photos {

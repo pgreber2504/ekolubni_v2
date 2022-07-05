@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import classes from "./NavLink.module.scss";
 
 type NavLinkPropTypes = {
@@ -8,9 +9,9 @@ type NavLinkPropTypes = {
 
 const NavLink = ({ id, title }: NavLinkPropTypes) => {
   return (
-    <li className={classes.navLink} id={id}>
-      {title}
-    </li>
+    <Link to={id} smooth activeClass={classes.active}>
+      <li className={classes.navLink}>{title}</li>
+    </Link>
   );
 };
 

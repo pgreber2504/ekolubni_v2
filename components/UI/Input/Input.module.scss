@@ -1,0 +1,17 @@
+@import "../../../shared/styles/variables";
+.input {
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid $font-color;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  height: 3rem;
+  padding: 1rem;
+  resize: none;
+  font-family: "DM Sans", sans-serif;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $action-color;
+  }
+}

@@ -1,12 +1,20 @@
+@use "../../shared/styles/mixins";
 @import "../../shared/styles/variables";
 
 .footer {
   display: flex;
-  padding: 6rem 3rem;
-  background-color: #37383d;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background-color: $font-color;
   justify-content: space-between;
   align-items: center;
   color: $background;
+  gap: 3rem;
+
+  @include mixins.breakpoint(large) {
+    flex-direction: row;
+    padding: 6rem 3rem;
+  }
 
   .footer--logo {
     height: 6rem;

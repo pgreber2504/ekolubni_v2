@@ -2,13 +2,14 @@
 
 .button {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 60px;
   color: $color-primary;
   background: $background;
   border: none;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  font-size: $font-content;
 
   &:hover,
   &:active {

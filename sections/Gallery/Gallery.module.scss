@@ -1,0 +1,15 @@
+@import '../../shared/styles/mixins';
+
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
+
+
+  @include breakpoint(large){
+    flex-direction: row;
+    gap: unset;
+  }
+}
