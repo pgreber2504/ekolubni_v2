@@ -11,8 +11,7 @@ const Hero = () => {
       <h1>Ekologiczne warsztaty mobilne</h1>
       <p>
         Jeśli Państwa podopieczni źle znoszą jazdę komunikacją miejską, ich
-        zachowanie w autobusie jest dalekie od ideału, zwyczajnie nie stać Was
-        na wynajęcie autokaru lub macie grupę/klasę integracyjną z dziećmi z
+        zachowanie w autobusie jest dalekie od ideału, cena autokaru jest poza waszym budżetem lub macie grupę/klasę integracyjną z dziećmi z
         różnymi deficytami… <br />
         Ekolubni przyjadą do WAS
       </p>
