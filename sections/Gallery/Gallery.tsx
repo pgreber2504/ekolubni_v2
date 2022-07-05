@@ -19,7 +19,7 @@ const Gallery = ({ id, title, description }: GalleryPropTypes) => {
             key={el.alt}
             src={el.src}
             alt={el.alt}
-            title="HELLO WORLD"
+            title={el.title}
           />
         ))}
       </div>
